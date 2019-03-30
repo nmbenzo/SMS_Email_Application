@@ -49,7 +49,6 @@ def sms_responses():
     Function that returns a dictionary of available sms responses to be used
     by the send_sms_response() function
     """
-
     menu = f" Hello, {get_phone_number()}! This is ISSS's chat messenger " \
         f"service. You can text questions or chat with this number to help " \
         f"you find answers to questions common among international students. " \
