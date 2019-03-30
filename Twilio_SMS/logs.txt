@@ -1,0 +1,261 @@
+29-03-2019:20:03:20 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:03:20 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:03:21 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:03:21 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:03:21 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:03:21 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:03:28 INFO     [run.py:148] i need to leave the university
+29-03-2019:20:03:29 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:03:29] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:03:55 INFO     [run.py:148] i want to leave usf
+29-03-2019:20:03:55 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:03:55] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:04:12 INFO     [run.py:148] i will take a leave of absence
+29-03-2019:20:04:12 INFO     [run.py:227] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Oh no - we're sorry to hear that Nathan! Let's bring you back to the main menu so we can better assist you...</Message><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:04:12 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:04:12] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:04:26 INFO     [run.py:148] i will take an loa
+29-03-2019:20:04:26 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:04:26 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:04:26] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:04:38 INFO     [run.py:148] i need to take a leave of absence
+29-03-2019:20:04:38 INFO     [run.py:227] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Oh no - we're sorry to hear that Nathan! Let's bring you back to the main menu so we can better assist you...</Message><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:04:38 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:04:38] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:06:42 INFO     [run.py:148] leave of absence
+29-03-2019:20:06:42 INFO     [run.py:227] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Oh no - we're sorry to hear that Nathan! Let's bring you back to the main menu so we can better assist you...</Message><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:06:42 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:06:42] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:06:59 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:06:59 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:06:59 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:06:59 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:07:02 INFO     [run.py:148] leave
+29-03-2019:20:07:02 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:07:02] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:07:14 INFO     [run.py:148] email
+29-03-2019:20:07:14 INFO     [run.py:185] <?xml version="1.0" encoding="UTF-8"?><Response><Message>isss@usfca.edu</Message></Response>
+29-03-2019:20:07:14 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:07:14] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:07:28 INFO     [run.py:148] cal
+29-03-2019:20:07:28 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:07:28] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:07:40 INFO     [run.py:148] leave of absence
+29-03-2019:20:07:40 INFO     [run.py:227] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Oh no - we're sorry to hear that Nathan! Let's bring you back to the main menu so we can better assist you...</Message><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:07:40 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:07:40] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:08:10 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:08:10 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:08:10 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:08:10 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:08:15 INFO     [run.py:148] leave of absence
+29-03-2019:20:08:15 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:08:15 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:08:15] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:08:22 INFO     [run.py:148] loa
+29-03-2019:20:08:22 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:08:22] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:08:34 INFO     [run.py:148] i need to take an loa
+29-03-2019:20:08:34 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:08:34] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:08:54 INFO     [run.py:148] leave
+29-03-2019:20:08:54 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:08:54] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:09:25 INFO     [run.py:148] travel
+29-03-2019:20:09:25 INFO     [run.py:173] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi, Nathan! Please click here to make an online request: https://form.jotform.com/USFISSS/isss-request-form</Message><Message>Document uploads may be required to complete your request.</Message></Response>
+29-03-2019:20:09:25 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:09:25] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:09:33 INFO     [run.py:148] i need a letter
+29-03-2019:20:09:33 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:09:33] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:09:45 INFO     [run.py:148] i need a travel i-20
+29-03-2019:20:09:45 INFO     [run.py:173] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi, Nathan! Please click here to make an online request: https://form.jotform.com/USFISSS/isss-request-form</Message><Message>Document uploads may be required to complete your request.</Message></Response>
+29-03-2019:20:09:45 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:09:45] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:09:55 INFO     [run.py:148] when can i get my document
+29-03-2019:20:09:55 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:09:55] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:10:02 INFO     [run.py:148] when
+29-03-2019:20:10:02 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:10:02] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:10:31 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:10:31 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:10:32 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:10:32 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:10:38 INFO     [run.py:148] when will my document be ready
+29-03-2019:20:10:38 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:10:38 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:10:38] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:10:46 INFO     [run.py:148] ready
+29-03-2019:20:10:46 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:10:46] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:13:00 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:13:00 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:13:01 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:13:01 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:13:09 INFO     [run.py:148] loa
+29-03-2019:20:13:09 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:13:09 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:13:09] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:14:13 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:14:13 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:14:14 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:14:14 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:14:18 INFO     [run.py:148] hi
+29-03-2019:20:14:18 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:14:18 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:14:18] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:14:30 INFO     [run.py:148] hello
+29-03-2019:20:14:30 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:14:30 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:14:30] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:14:52 INFO     [run.py:148] i need to call isss
+29-03-2019:20:14:52 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:14:52 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:14:52] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:15:04 INFO     [run.py:148] why is this not working?
+29-03-2019:20:15:04 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:15:04 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:15:04] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:15:25 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:15:25 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:15:25 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:15:25 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:15:30 INFO     [run.py:148] i need to call isss
+29-03-2019:20:15:30 INFO     [run.py:181] <?xml version="1.0" encoding="UTF-8"?><Response><Message>4154222654</Message></Response>
+29-03-2019:20:15:30 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:15:30] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:15:44 INFO     [run.py:148] when will my document be ready?
+29-03-2019:20:15:44 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:15:44 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:15:44] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:15:54 INFO     [run.py:148] ready
+29-03-2019:20:15:54 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:15:54 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:15:54] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:16:25 INFO     [run.py:148] i need to see the menu
+29-03-2019:20:16:25 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:16:25 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:16:25] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:16:49 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:16:49 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:16:50 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:16:50 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:16:55 INFO     [run.py:148] i need to see the menu
+29-03-2019:20:16:55 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:16:55 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:16:55] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:17:20 INFO     [run.py:148] when will my document be ready to pickup?
+29-03-2019:20:17:20 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:17:20 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:17:20] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:17:40 INFO     [run.py:148] hi
+29-03-2019:20:17:40 INFO     [run.py:197] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:17:40 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:17:40] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:17:46 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:17:46 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:17:46 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:17:46 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:17:55 INFO     [run.py:148] hi
+29-03-2019:20:17:55 INFO     [run.py:209] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:17:55 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:17:55] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:18:10 INFO     [run.py:148] i need to take a leave of absence
+29-03-2019:20:18:10 INFO     [run.py:209] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:18:10 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:18:10] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:27:56 INFO     [_internal.py:88]  * Detected change in '/Users/nbenzschawel/Library/Mobile Documents/com~apple~CloudDocs/Comms_Application/Twilio_SMS/run.py', reloading
+29-03-2019:20:27:56 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:27:57 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:27:57 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:28:00 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:28:00 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:28:00 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:28:00 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:28:08 INFO     [run.py:148] hi
+29-03-2019:20:28:08 INFO     [run.py:209] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:28:08 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:28:08] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:28:27 INFO     [run.py:148] i need to take an loa
+29-03-2019:20:28:27 INFO     [run.py:209] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:28:27 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:28:27] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:29:06 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:29:06 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:29:06 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:29:06 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:29:15 INFO     [run.py:148] i need to take an loa
+29-03-2019:20:29:15 INFO     [run.py:215] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:29:15 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:29:15] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:29:33 INFO     [run.py:148] i want to leave the university
+29-03-2019:20:29:33 INFO     [run.py:215] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:29:33 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:29:33] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:31:01 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:31:01 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:31:01 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:31:01 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:35:02 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:35:02 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:35:02 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:35:02 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:35:18 INFO     [run.py:153] i'd like to transfer to another university
+29-03-2019:20:35:19 INFO     [run.py:190] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Nathan, if you would like to transfer to another university you will need to ask ISSS to transfer your SEVIS record. Please request a transfer out here: 
+https://form.jotform.com/USFISSS/isss-request-form</Message></Response>
+29-03-2019:20:35:19 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:35:19] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:37:05 INFO     [_internal.py:88]  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+29-03-2019:20:37:05 INFO     [_internal.py:88]  * Restarting with stat
+29-03-2019:20:37:05 WARNING  [_internal.py:88]  * Debugger is active!
+29-03-2019:20:37:05 INFO     [_internal.py:88]  * Debugger PIN: 236-533-055
+29-03-2019:20:37:13 INFO     [run.py:153] hello
+29-03-2019:20:37:13 INFO     [run.py:173] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:37:13 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:37:13] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:37:33 INFO     [run.py:153] i'd like to transfer to another university
+29-03-2019:20:37:33 INFO     [run.py:190] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Nathan, if you would like to transfer to another university you will need to ask ISSS to transfer your SEVIS record. Please request a transfer out here: 
+https://form.jotform.com/USFISSS/isss-request-form</Message></Response>
+29-03-2019:20:37:33 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:37:33] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:37:56 INFO     [run.py:153] when will my new i-20 be ready?
+29-03-2019:20:37:56 INFO     [run.py:186] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi Nathan, you can get a quicker answer if you call or email ISSS. 
+
+Call: 415-422-2654
+Email: isss@usfca.edu</Message></Response>
+29-03-2019:20:37:56 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:37:56] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:38:09 INFO     [run.py:153] i want to apply for opt
+29-03-2019:20:38:09 INFO     [run.py:202] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Many students have question about OPT, Nathan! Not to worry, please click here to learn more about OPT: https://myusf.usfca.edu/isss/students/f-1/employment/opt </Message></Response>
+29-03-2019:20:38:09 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:38:09] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:38:27 INFO     [run.py:153] i wanna make an appointment with my advisor
+29-03-2019:20:38:27 INFO     [run.py:177] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Sure thing, Nathan! Click here to make an appointment with your advisor: https://isss.checkappointments.com/</Message></Response>
+29-03-2019:20:38:27 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:38:27] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:38:52 INFO     [run.py:153] i am going back to my country this weekend. i think i need a travel signature. how can i get that?
+29-03-2019:20:38:52 INFO     [run.py:173] <?xml version="1.0" encoding="UTF-8"?><Response><Message> Hello, Nathan! This is ISSS's chat messenger service. You can text questions or chat with this number to help you find answers to questions common among international students. 
+
+Try typing ''make an appointment'' or ''register for a workshop.'' You can also ask questions about OPT and CPT.
+
+*Your response is not case-sensitive</Message></Response>
+29-03-2019:20:38:52 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:38:52] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:39:30 INFO     [run.py:153] i will go back to my country. i need a travel signature asap!
+29-03-2019:20:39:30 INFO     [run.py:182] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Hi, Nathan! Please click here to make an online request: https://form.jotform.com/USFISSS/isss-request-form</Message><Message>Document uploads may be required to complete your request.</Message></Response>
+29-03-2019:20:39:30 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:39:30] "POST /sms HTTP/1.1" 200 -
+29-03-2019:20:40:33 INFO     [run.py:153] how can i leave usf?
+29-03-2019:20:40:33 INFO     [run.py:224] <?xml version="1.0" encoding="UTF-8"?><Response><Message>Good day, Nathan. You've indicated that you would like information about taking a leave of absence or withdrawing from USF. Click here to learn what you will need to do: https://myusf.usfca.edu/isss/students/f-1/leave-of-absence-withdrawal</Message></Response>
+29-03-2019:20:40:33 INFO     [_internal.py:88] 127.0.0.1 - - [29/Mar/2019 20:40:33] "POST /sms HTTP/1.1" 200 -

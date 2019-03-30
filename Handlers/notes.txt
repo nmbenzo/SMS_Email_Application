@@ -1,0 +1,603 @@
+
+"""
+---Notes---
+An app that allows the user to choose which spreadsheet they
+want to update and what on that spreadsheet they'd like to update.
+The app should have a menu asks the user what they'd like to do:
+***See All Spreadsheets
+***Choose a Spreadsheet
+***What would you like to do with this spreadsheet
+***Update A,B,C, or All
+***See Menu Again
+***Upload to Google Spreadsheets
+***Send an email to a specific student population
+***Quit
+
+"""
+
+
+----Notes--- Other possible function layouts for build_new_student_data.py (SEVIS_Transfers)
+
+import xlrd
+import os
+os.getcwd()
+
+
+wbnew = xlrd.open_workbook('/Users/nbenzschawel/Desktop/New_sevis_data_test.xlsx')
+
+# Get sheet by index
+wsnew = wbnew.sheet_by_index(0) # Sheet1
+
+#Getting number of rows and columns
+new_row = wsnew.nrows
+new_col = wsnew.ncols
+
+new_data = []
+
+
+def append_newdata(new_data):
+    """Builds a list of data from each column in a row
+    """
+
+    for row in range(1 , new_row):
+        # list of row values
+        row_values = []
+        # Iterating over number of cols
+        for col in range(new_col):
+            row_values.append(wsnew.cell_value(row , col))
+
+        # Making list with row values
+        row_list = list(row_values)
+        # Adding list to list
+        new_data.append(row_list)
+
+    return new_data
+
+append_newdata(new_data)
+
+
+def populate_new_data(new_data):
+    rowNum = ws.max_row + 1
+    for row in range(1, num_row1):
+        for col in range(num_col1):
+            current_data = wsDuplicate.cell(row, col).value
+            for d in current_data:
+                for data in new_data:
+                    if d not in data:
+                        wsDuplicate.cell(row=rowNum, col=num_col1).value = data
+
+"""
+ws1 = wb.active
+print(wb.sheetnames)
+
+wsfinal = wb['Final_for_Atlas']
+wsduplicate = wb['Duplicate']
+
+SEVISID = []
+Status = []
+
+   for rowNum in range(2, wsduplicate.max_row):
+        for row in wsduplicate.iter_rows(min_row=2 , max_col=10,
+                                         max_row=rowNum):
+            for cell in row:
+                row_data.append(cell.value)
+    return row_data
+
+
+column_list = [cell.column for cell in ws1[1]]
+print(column_list)
+
+
+def find_duplicates(data, data_types=(list)):
+    if isinstance(data, data_types):
+        for value in data:
+            for subvalue in find_duplicates(value, data_types):
+                yield subvalue
+    else:
+        yield data
+
+data = get_row_list(data)
+
+print(list(find_duplicates(data)))
+"""
+
+
+"""
+# Test
+for rowNum in range(1, old_sheet.max_row):
+    for colNum in range(1, old_sheet.max_column):
+        new_sheet.cell(row=(rowNum + 1), column=colNum).value =
+
+
+def get_cell_values():
+    """builds a list of data from each cell value in the old spreadsheet"""
+    for row in old_sheet.iter_rows(range_string=None, min_row=None, max_row=None,
+                                   min_col=None, max_col=None, row_offset=0,
+                                   column_offset=0):
+        for cell in row:
+            cell_values.append(cell.internal_value)
+    return cell_values
+
+get_cell_values()
+"""
+
+
+"""
+# Now do the rest of it. Note the row offset.
+endRow = new_sheet.max_row
+for row_num in range(1, max_row):
+    for col_num in range (1, max_col):
+        new_sheet.cell(row = (row_num + 1), column = col_num).value = old_sheet.cell(row = row_num, column = col_num).value
+
+new_sheet.delete_rows(1)
+
+wb2.save(file2)
+"""
+
+----Old build_transfer_data.py code----
+
+import openpyxl
+import xlrd
+import os
+os.getcwd()
+from SEVIS_Transfers.build_new_student_data import wb_old, old_sheet, row_max, col_max
+
+file = '/Users/nbenzschawel/Desktop/SEVIS_Trans_python_test.xlsx'
+
+wb = xlrd.open_workbook(file)
+wb1 = openpyxl.load_workbook(file)
+
+
+# Get sheet by index
+wsFinal = wb.sheet_by_index(0) # Final for Atlas
+wsDuplicate = wb.sheet_by_index(1) # duplicate
+
+ws = wb1.worksheets[1]
+
+#Getting number of rows and columns
+num_row0 = wsFinal.nrows
+num_col0 = wsFinal.ncols
+
+num_row1 = wsDuplicate.nrows
+num_col1 = wsDuplicate.ncols
+
+#Initializing list
+data = []
+
+
+def get_row_list():
+    """Builds a list of data from each column in a row
+    """
+    for row in range(1 , num_row0):
+        # list of row values
+        row_values = []
+        # Iterating over number of cols
+        for col in range(num_col0):
+            row_values.append(wsDuplicate.cell_value(row , col))
+
+        # Making list with row values
+        row_list = list(row_values)
+        # Adding list to list
+        data.append(row_list)
+
+    return data
+
+get_row_list()
+
+
+def build_sevsID_status(data):
+    """Builds a new list of SEVISIDs and Statuses: Draft or Initial from
+       the data list put together in the get_row_list function
+    """
+    looking_for = []
+    for list in data:
+        d1 = list[0]
+        d2 = list[-3]
+        looking_for.append([d1, d2])
+
+    return looking_for
+
+
+def populate_new_data(row_max, col_max):
+    rowNum = ws.max_row + 1
+    for row_num in range(rowNum, row_max):
+        for col_num in range(1, col_max):
+            ws.cell(row=(row_num + 1), column=col_num).value = old_sheet.cell(row=row_num, column=col_num).value
+
+    wb1.save(file)
+
+
+populate_new_data(row_max, col_max)
+
+
+"""
+def createData():
+    print('Processing data...')
+    if new_sheet.cell(row=1,column=1, value='SEVIS ID').value == 'SEVIS ID':
+        selectedRange = copyRange(1, 1, col_max, row_max, old_sheet)
+        pasteRange(1, 5, col_max, 14, new_sheet, selectedRange)
+    else:
+        selectedRange = copyRange(1, 2, col_max, row_max, old_sheet)
+        pasteRange(1, 5, col_max, 14, new_sheet, selectedRange)
+"""
+
+
+"""
+---Query a specific folder on google drive---
+
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+
+g_login = GoogleAuth()
+g_login.LocalWebserverAuth()
+
+drive = GoogleDrive(g_login)
+
+def ListFolder(parent):
+  filelist=[]
+  file_list = drive.ListFile({'q': "'%s' in parents and trashed=false" % parent}).GetList()
+  for f in file_list:
+    if f['mimeType']=='application/vnd.google-apps.folder': # if folder
+        filelist.append({"id":f['id'],"title":f['title'],"list":ListFolder(f['id'])})
+    else:
+        filelist.append({"title":f['title'],"title1":f['alternateLink']})
+  print(filelist)
+
+ListFolder('root')
+"""
+
+
+"""
+Old way of making dicts for comparison
+
+campusID = []
+
+for rowNum in range(2, ws_grad.max_row):
+    id = ws_grad.cell(row=rowNum, column=1).value
+    campusID.append(id)
+
+
+SEVISID = []
+
+for rowNum in range(2, ws_grad.max_row):
+    id = ws_grad.cell(row=rowNum, column=5).value
+    SEVISID.append(id)
+
+ campusID_SEVISID = {}
+
+for i in range(len(campusID)): # verbose dict building
+    campusID_SEVISID[campusID[i]] = SEVISID[i]
+
+
+***build_grad_data***
+
+campusID = []
+
+for rowNum in range(2, ws_grad.max_row):
+    id = ws_grad.cell(row=rowNum, column=1).value
+    campusID.append(id)
+
+
+SEVISID = []
+
+for rowNum in range(2, ws_grad.max_row):
+    id = ws_grad.cell(row=rowNum, column=5).value
+    SEVISID.append(id)
+
+work_auth_type = []
+
+for rowNum in range(2, ws_grad.max_row):
+    type = ws_grad.cell(row=rowNum, column=31).value # need to check column in spreadsheet
+    work_auth_type.append(type)
+
+work_auth_enddate = []
+
+for x in range(2, ws_grad.max_row):
+    work_end = ws_grad.cell(row=x, column=33).value # need to check column in spreadsheet
+    work_auth_enddate.append(work_end)
+
+
+profile_end_date = []
+
+for rowNum in range(2, ws_grad.max_row):
+    end_date = ws_grad.cell(row=rowNum, column=10).value # need to check column in spreadsheet
+    profile_end_date.append(end_date)
+
+for x in range(2, ws_grad.max_row):
+    email = ws_grad.cell(row=x, column=30).value # need to check column in spreadsheet
+    emails.append(email)
+
+for x in range(2, ws_grad.max_row):
+    campusID = ws_grad.cell(row=x, column=1).value
+    email_campID.append(campusID)
+
+"""
+
+"""
+
+***build_student_data.py
+
+
+# Old OPENPYXL methods
+# campusID = []
+# SEVISID = []
+# for rowNum in range(2, ws1_new.max_row):  # skip the first row and go to the last row
+    # id = ws1_new.cell(row=rowNum, column=5).value
+    # SEVISID.append(id)
+
+# for rowNum in range(2, ws1_new.max_row):
+    # id = ws1_new.cell(row=rowNum, column=1).value
+    # campusID.append(id)
+
+# build a list of majors
+# major_data = []
+
+# for rowNum in range(2, ws1_new.max_row):
+   # major = ws1_new.cell(row=rowNum, column=13).value
+   # major_data.append(major)
+
+"""
+
+
+"""
+
+***spreadsheet.py
+
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from XLSX_to_CSV.converter import newstudent_excel_to_csv
+from New_Student_Registration.build_new_student_advisor_notes import ws2_new
+
+
+def authenticate_google_docs():
+    # use creds to create a client to interact with the Google Drive API
+    scope = ['https://spreadsheets.google.com/feeds',
+             'https://www.googleapis.com/auth/drive']
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+    gc = gspread.authorize(creds)
+    return gc
+
+gc = authenticate_google_docs()
+
+sh = gc.open('201920 SEVIS Registration')
+# print(sh.id)
+
+
+worksheet_list = sh.worksheets()
+# print(worksheet_list)
+
+# Naming convention for this gs.workbook
+
+# COL = sh.worksheet('COL')
+# transferUG = sh.worksheet('Transfer UG')
+# transferGR = sh.worksheet('Transfer GR')
+# new_students = sh.worksheet('New Students')
+# continuing_students = sh.worksheet('Continuing Students')
+
+
+def update_new_students(sh):
+    newstudent_excel_to_csv()
+    content = open('new_student.csv', 'r').read()
+    gc.import_csv(sh.id, content)
+
+
+"""
+
+
+"""
+Old add_SV_status function for New_Student_Registration.build_new_student_advisor_notes.py
+
+
+def add_SV_status(SEVISID_checked_in):
+    """
+    add_advisor notes references the checked_in columns of workbook(ws)
+    and then builds advisor notes based on which columns are populated
+    """
+    ws2_new.insert_cols(1)
+    title = ws2_new.cell(row=1, column=1)
+    title.value = 'SV Status'
+    for rowNum in range(2, ws2_new.max_row):
+        sevis_ID = ws2_new.cell(row=rowNum, column=6).value
+        for x in SEVISID_checked_in:
+            if x == sevis_ID:
+                ws2_new.cell(row=rowNum, column=1).value = 'SV Status: ' + str(SEVISID_checked_in[sevis_ID])
+
+    wb2_new.save('/Users/nbenzschawel/Downloads/SEVIS_raw_data.xlsx')
+
+"""
+
+
+"""
+*** XLXS_to_CSV retiring ***
+
+app.py
+if user_input == 'x':  # convert xlsx to csv
+    run_converter(GLBL_USER_CHOICE)
+
+
+menus.py
+def run_converter(GLBL_USER_CHOICE):
+    """
+    menu to convert choose which xlsx files to convert to csv
+
+    """
+    user_input = input(CONVERT_TO_CSV)
+    while user_input != 'q':
+        if user_input == 'n':
+            newstudent_excel_to_csv()
+            print('Converted file from XLSX to CSV')
+        elif user_input == 'a':
+            activestud_excel_to_cvs()
+            print('Converted file from XLSX to CSV')
+        elif user_input == 'g':
+            gradstud_excel_to_cvs()
+            print('Converted file from XLSX to CSV')
+        elif user_input == 'c':
+            completedstud_excel_to_cvs()
+            print('Converted file from XLSX to CSV')
+
+        return GLBL_USER_CHOICE
+
+
+import_app_modules.py
+CONVERT_TO_CSV = """
+Which xlsx file would you like to convert to CSV:
+- 'n' - NEW Student Reg xlsx
+- 'a' - ACTIVE Student Reg xlsx
+- 'g' - GRADUATED Student xlsx
+- 'c' - COMPLETED Student xlsx
+
+"""
+
+CSV_Converter
+import pandas as pd
+
+
+def newstudent_excel_to_csv():
+    data_xls = pd.read_excel('/Users/nbenzschawel/Downloads/SEVIS_raw_data.xlsx', 'Sheet1', index_col=None)
+    data_xls.to_csv('new_student.csv', encoding='utf-8')
+
+
+def activestud_excel_to_cvs():
+    data_xls = pd.read_excel('', 'Sheet1', index_col=None)
+    data_xls.to_csv('contstud.csv', encoding='utf-8')
+
+
+def completedstud_excel_to_cvs():
+    data_xls = pd.read_excel('', 'Sheet1', index_col=None)
+    data_xls.to_csv('completedstud.csv', encoding='utf-8')
+
+
+def gradstud_excel_to_cvs():
+    data_xls = pd.read_excel('', 'Sheet1', index_col=None)
+    data_xls.to_csv('graduatedstud.csv', encoding='utf-8')
+
+
+""" FOR PRINTING FILES FROM A GOOGLE TEAM DRIVE """
+
+def main():
+    """Shows basic usage of the Sheets API.
+    Prints values from a sample spreadsheet.
+    """
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    store = file.Storage('credentials.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secrets.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+    service = build('drive', 'v3', http=creds.authorize(Http()))
+
+    # Call the Drive v3 API
+    results = service.files().list(
+        pageSize=50, supportsTeamDrives=True, includeTeamDriveItems=True,
+        corpora='teamDrive', teamDriveId='0ADUIPThXplYvUk9PVA',
+        fields="nextPageToken, files(id, name)").execute()
+    items = results.get('files', [])
+
+    if not items:
+        print('No files found.')
+    else:
+        print('Files:')
+        for item in items:
+            print(u'{0} ({1})'.format(item['name'], item['id']))
+
+
+    meta = service.files().get(fileId=file_id, fields="*",
+                                    supportsTeamDrives=True).execute()
+
+    return meta
+
+
+""" OLD download_files.py APP """
+from __future__ import print_function
+import io
+from googleapiclient import discovery
+from googleapiclient.discovery import build
+from httplib2 import Http
+from oauth2client import file, client, tools
+from googleapiclient.http import MediaIoBaseDownload
+from Handlers.Google_Drive_IDs import Registration_file_id, td_id, SCOPES, Excel, file_name
+
+
+def main():
+    store = file.Storage('credentials.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secrets.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+    service = build('drive', 'v3', http=creds.authorize(Http()))
+
+    meta = service.files().get(fileId=Registration_file_id, fields="*",
+                               supportsTeamDrives=True).execute()
+    return meta
+
+
+def download_file(file_id, mimeType, file_name):
+    store = file.Storage('credentials.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secrets.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+    service = build('drive', 'v3', http=creds.authorize(Http()))
+
+    # Call the Drive v3 API
+    results = service.files().list(
+        pageSize=50, supportsTeamDrives=True, includeTeamDriveItems=True,
+        corpora='teamDrive', teamDriveId=td_id,
+        fields="nextPageToken, files(id, name)").execute()
+    items = results.get('files', [])
+
+    if not items:
+        print('No files found.')
+    else:
+        print('Files:')
+
+    if 'google-apps' in mimeType:
+        return
+
+    data = service.files().export_media(fileId=file_id, mimeType=Excel)
+    fh = io.FileIO(file_name, 'wb')
+    downloader = MediaIoBaseDownload(fh, data)
+    done = False
+    while done is False:
+        status, done = downloader.next_chunk()
+        print("Download: {}".format(int(status.progress() * 100)))
+
+
+if __name__ == '__main__':
+    main()
+    store = file.Storage('credentials.json')
+    creds = store.get()
+    if not creds or creds.invalid:
+        flow = client.flow_from_clientsecrets('client_secrets.json', SCOPES)
+        creds = tools.run_flow(flow, store)
+
+    drive_service = discovery.build('drive', 'v3', http=creds.authorize(Http()))
+    files = drive_service.files().list(pageSize=50, supportsTeamDrives=True, includeTeamDriveItems=True,
+        corpora='teamDrive', teamDriveId=td_id,
+        fields="nextPageToken, files(id, name)").execute()
+    for f in files['files']:
+        if f['id'] == Registration_file_id:
+            print(f['name'], f['id'])
+            download_file(Registration_file_id, Excel, file_name)
+
+
+
+
+
+func_mapping = {
+    'b': menu.build_it_all(global_menu),
+    'f': menu.final_build_it(global_menu),
+    's': menu.sync_googlesheets(global_menu),
+    'm': menu.sms(global_menu),
+    't': menu.transfer_menu(global_menu),
+    'e': menu.emails(global_menu),
+    'n': menu.new_menu(global_menu),
+    'a': menu.active_menu(global_menu),
+    'c': menu.cancellation_menu(global_menu),
+    'd': menu.completed_menu(global_menu),
+    'g': menu.grad_menu(global_menu)
+
+}
