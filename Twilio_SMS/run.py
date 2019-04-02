@@ -86,6 +86,18 @@ def send_sms_response():
         resp.message(menu_resp['workshop'])
         logger.info(f'{resp}')
         return str(resp)
+    elif ('opt' in inbound_message) and \
+        ('travel' in inbound_message) or \
+        ('leave' in inbound_message):
+        resp.message(menu_resp['opt_travel'])
+        logger.info(f'{resp}')
+        return str(resp)
+    elif ('opt' in inbound_message) and \
+        ('how' in inbound_message) or \
+        ('long' in inbound_message):
+        resp.message(menu_resp['opt_processing_time'])
+        logger.info(f'{resp}')
+        return str(resp)
     elif 'opt' in inbound_message:
         resp.message(menu_resp['opt'])
         logger.info(f'{resp}')
@@ -94,6 +106,9 @@ def send_sms_response():
         resp.message(menu_resp['cpt'])
         logger.info(f'{resp}')
         return str(resp)
+
+    # perhaps make k-v pair to identify and return keyword triggers in the
+    # response
     elif ('travel' in inbound_message) or ('cpt' in inbound_message) \
         or ('letter' in inbound_message) or ('rcl' in inbound_message) \
         or ('i20' in inbound_message) or ('i-20' in inbound_message) \
@@ -124,13 +139,13 @@ def send_sms_response():
     # If the polarity of the sentiment is greater than zero, the statement is
     # positive.  Highest positivity is 1.0
     elif sentiment.polarity > 0:
-        resp.message(menu_resp['sentient_resp1'])
+        resp.message(menu_resp['sentiment_resp1'])
         return str(resp)
 
     # If the polarity of the sentiment is less than zero, the statement is
     # negative.  Lowest negativity is -1.0.
     elif sentiment.polarity < 0:
-        resp.message(menu_resp['sentient_resp2'])
+        resp.message(menu_resp['sentiment_resp2'])
         resp.message(menu_resp['menu'])
         logger.info(f'{resp}')
         return str(resp)
@@ -138,7 +153,7 @@ def send_sms_response():
     # If the polarity is 0.0, TextBlob was unable to determine the sentiment
     # of the statement.  In this case, we'll return a neutral response in turn.
     else:
-        resp.message(menu_resp['sentient_resp3'])
+        resp.message(menu_resp['sentiment_resp3'])
         return str(resp)
 
 
