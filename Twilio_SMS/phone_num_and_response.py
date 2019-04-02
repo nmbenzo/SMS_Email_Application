@@ -79,15 +79,22 @@ def sms_responses():
     workshop = f"Great to hear you'd like more information about our workshops, " \
         f"{get_phone_number()}. You can learn more or register for a workshop " \
         f"here: \nhttps://isss.checkappointments.com/"
+    opt_processing_times_general = 'Generally, it will take USCIS between ' \
+        '90-100 days to process OPT applications. Please be sure to plan your ' \
+        'employment or travel carefully'
+    opt_travel = f'There are very specific guidelines you must be aware of while' \
+        f' traveling on OPT, {get_phone_number()}. Please see the ' \
+        f'ISSS guidelines for travel while on OPT:' \
+        f'\n\nhttps://myusf.usfca.edu/isss/students/f-1/employment/opt/after-mailing-application'
     transfer = f'{get_phone_number()}, if you would like to transfer to ' \
         f'another university you will need to ask ISSS to transfer your SEVIS ' \
         f'record. Please request a transfer out here: ' \
         f'\nhttps://form.jotform.com/USFISSS/isss-request-form'
-    sentient_resp1 = f"That's great to hear, {get_phone_number()}! " \
+    sentiment_resp1 = f"That's great to hear, {get_phone_number()}! " \
         f"Is there anything else ISSS can help you with today?"
-    sentient_resp2 = f"Oh no - we're sorry to hear that {get_phone_number()}! " \
+    sentiment_resp2 = f"Oh no - we're sorry to hear that {get_phone_number()}! " \
         f"Let's bring you back to the main menu so we can better assist you..."
-    sentient_resp3 = f"Thanks for letting us know about that, " \
+    sentiment_resp3 = f"Thanks for letting us know about that, " \
         f"{get_phone_number()}. You can access ISSS services or get information " \
         f"with by communicating with this chat service. " \
         f'\n\nTry asking a question about OPT or scheduling an appointment. ' \
@@ -109,10 +116,12 @@ def sms_responses():
             'first_bad_resp': first_bad_resp,
             'second_bad_resp': second_bad_resp,
             'third_bad_resp': third_bad_resp,
+            'opt_processing_time': opt_processing_times_general,
+            'opt_travel': opt_travel,
             'website': website,
             'workshop': workshop,
-            'sentient_resp1': sentient_resp1,
-            'sentient_resp2': sentient_resp2,
-            'sentient_resp3': sentient_resp3,
+            'sentiment_resp1': sentiment_resp1,
+            'sentiment_resp2': sentiment_resp2,
+            'sentiment_resp3': sentiment_resp3,
             'contact_isss': contact_isss
         }
